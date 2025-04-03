@@ -1,0 +1,23 @@
+.footer {
+  margin-top: 100px;
+}
+.social-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  height: 100px;
+}
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons .icon {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.2);
+}

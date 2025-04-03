@@ -1,0 +1,12 @@
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.video-category {
+  font-size: var(--first-header-size);
+  font-family: var(--general-font-family);
+  color: var(--header-text-color);
+}

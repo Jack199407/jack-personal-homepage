@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background: linear-gradient(to right, #82d7f0, #bbd5ea, #82d7f0);
+}
+:root {
+  --general-font-family: "Andada Pro", serif;
+  --header-text-color: white;
+  --first-header-size: 40px;
+  --text-size: 24px;
+}
+
+.figure-wrapper {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  z-index: -2;
+}
+
+.figure {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
