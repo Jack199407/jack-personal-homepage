@@ -3,17 +3,16 @@ import "./Videos.css";
 
 import Video from "../../components/video/Video";
 
-const API_KEY = "AIzaSyAqhtFW0Epdtr-CwJsqJPDi-6h5YmTvBnw";
+const API_KEY = "AIzaSyCBneVsoxm6-A4r-ROnf0oecO8TomRE_R0";
 const PLAYLISTS = {
-  Rehearsals: "PLWwcLAMRr0oxec5wL-9wTg93CDsZOnZSk",
-  Performances: "PLWwcLAMRr0oyq7fsy-lei1Nhbtkpp2WKI",
+  MUSIC: "PLmtWsmN_6KkQ_rLAFqt7kZm7j2FOJ5F6M",
 };
 
 export default class Videos extends Component {
   render() {
     return (
-      <div className="video-container">
-        <div className="video-overlay"></div>
+      <div className="videos-container">
+        <div className="videos-overlay"></div>
         {Object.entries(PLAYLISTS).map(([key, value]) => (
           <Video api={API_KEY} title={key} playlist={value} />
         ))}
