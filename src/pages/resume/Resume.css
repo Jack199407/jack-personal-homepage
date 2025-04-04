@@ -1,0 +1,80 @@
+.resume-container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.resume-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+  opacity: 1;
+  pointer-events: none;
+}
+.resume-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 960px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Typography */
+.resume-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--header-text-color);
+  letter-spacing: 1px;
+}
+
+.resume-wrapper h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--header-text-color);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.resume-wrapper h2::before {
+  content: "💠";
+  margin-right: 0.5rem;
+}
+
+.resume-wrapper h3 {
+  font-weight: 600;
+  color: var(--header-text-color);
+}
+
+.resume-wrapper p,
+.resume-wrapper li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--header-text-color);
+}
+
+.resume-wrapper a {
+  color: #70c0ff;
+  text-decoration: underline;
+}
+
+.resume-wrapper ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.resume-wrapper strong {
+  color: var(--header-text-color);
+}

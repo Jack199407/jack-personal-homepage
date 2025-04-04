@@ -1,0 +1,78 @@
+/* ResumeDropdown.css */
+
+.resume-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* NAV */
+.resume-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.resume-link {
+  text-transform: uppercase;
+  color: var(--header-text-color);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.resume-toggle {
+  color: var(--header-text-color);
+  font-size: 10px;
+  padding-top: 2px;
+  line-height: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.resume-arrow {
+  display: inline-block;
+  font-size: 10px;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+.rotate .resume-arrow {
+  transform: rotate(90deg);
+}
+
+.resume-nav--active {
+  border-bottom: 1px solid var(--header-text-color);
+}
+
+.resume-menu-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-menu {
+  background: black;
+  color: var(--header-text-color);
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-menu-item {
+  color: var(--header-text-color);
+  text-decoration: none;
+}
+
+.resume-menu-item:hover {
+  text-decoration: underline;
+}

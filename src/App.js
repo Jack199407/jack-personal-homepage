@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Videos from "./pages/videos/Videos";
 import About from "./pages/about/About";
+import Resume from "./pages/resume/Resume";
 import usePageTitle from "./hooks/UsePageTitle";
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
         <Route path="/videos" element={<Videos />} />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />

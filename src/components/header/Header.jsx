@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import ResumeMenu from "../resume/ResumeMenu";
 import "./Header.css";
 
 export default class header extends Component {
@@ -21,6 +22,7 @@ export default class header extends Component {
             <li>
               <NavLink to="/about">About</NavLink>
             </li>
+            <ResumeMenu />
             <li>
               <a href="/contact">Contact</a>
             </li>
