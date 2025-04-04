@@ -6,9 +6,11 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Videos from "./pages/videos/Videos";
 import About from "./pages/about/About";
+import usePageTitle from "./hooks/UsePageTitle";
 import "./App.css";
 
 function App() {
+  usePageTitle();
   return (
     <div className="App">
       <div className="figure-wrapper">
