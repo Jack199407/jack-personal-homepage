@@ -17,9 +17,11 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5050; // fallback to 5050 if not set
 
+const corsOrigin = process.env.CORS_ORIGIN || "http://localhost:3000";
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: corsOrigin,
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
   })
