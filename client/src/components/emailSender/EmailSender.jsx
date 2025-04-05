@@ -25,9 +25,12 @@ class EmailSender extends Component {
     }
 
     try {
-      await axios.post("http://localhost:5050/api/send-email", {
-        email,
-      });
+      await axios.post(
+        "https://jack-personal-homepage-backend.onrender.com/api/send-email",
+        {
+          email,
+        }
+      );
       this.setState({ status: "" });
     } catch (error) {
       console.error(error);
