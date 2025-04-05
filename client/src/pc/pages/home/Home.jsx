@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import EmailSend from "../../../components/emailSender/EmailSender";
 import PhotoWall from "../../../components/photoWall/PhotoWall";
+import AppleMusic from "../../../components/appleMusic/AppleMusic";
 import "./Home.css";
 export default class Home extends Component {
   handleScroll = () => {
@@ -27,7 +27,8 @@ export default class Home extends Component {
     return (
       <div className="home-page">
         <div className="home-overlay"></div>
-        <EmailSend />
+        <div className="take-room"></div>
+        <AppleMusic />
         <PhotoWall />
       </div>
     );

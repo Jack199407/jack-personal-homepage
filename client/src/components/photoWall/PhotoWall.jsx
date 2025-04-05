@@ -24,22 +24,20 @@ class PhotoWall extends Component {
     Photo9,
   ];
 
-  rotations = [-5, 3, -3, 5, -2, 1, -4, 2, -3]; // 小幅度旋转角度
-
   render() {
     return (
-      <div className="photowall-container">
-        {this.photos.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`photo-${index}`}
-            className="photowall-image"
-            style={{
-              transform: `rotate(${this.rotations[index]}deg)`,
-            }}
-          />
-        ))}
+      <div className="photowall-wrapper">
+        <p>LIFE FOOTPRINTS</p>
+        <div className="photowall-container">
+          {this.photos.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`photo-${index}`}
+              className="photowall-image"
+            />
+          ))}
+        </div>
       </div>
     );
   }

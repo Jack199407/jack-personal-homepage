@@ -1,0 +1,27 @@
+.apple-music-container {
+  width: 100%;
+}
+
+.playlist-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px;
+  width: 80%;
+  margin: 0 auto;
+  color: var(--header-text-color);
+}
+.playlist-wrapper p {
+  font-family: var(--general-font-family);
+  font-size: var(--first-header-size);
+  color: var(--header-text-color);
+  font-weight: bold;
+}
+.apple-music-embed {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background: transparent;
+  height: 300px;
+  border: none;
+}

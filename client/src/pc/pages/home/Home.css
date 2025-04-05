@@ -4,6 +4,10 @@
   align-items: center;
   flex-direction: column;
 }
+.take-room {
+  height: calc(100vh - 70px);
+  width: 100%;
+}
 .home-overlay {
   position: fixed;
   top: 0;

@@ -1,16 +1,28 @@
+.photowall-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photowall-wrapper p {
+  font-family: var(--general-font-family);
+  font-size: var(--first-header-size);
+  color: var(--header-text-color);
+  font-weight: bold;
+}
+
 .photowall-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10rem;
+  gap: 2rem;
   justify-items: center;
   align-items: center;
   padding: 2rem;
-  margin-top: 80px;
 }
 
 .photowall-image {
-  width: 360px;
-  height: 480px;
+  width: 240px;
+  height: 320px;
   object-fit: cover;
   border-radius: 0.75rem;
   border: 2px solid white;

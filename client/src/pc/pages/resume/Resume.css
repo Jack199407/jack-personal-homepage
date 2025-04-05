@@ -1,12 +1,3 @@
-.resume-container {
-  min-height: 100vh;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-}
-
 .resume-overlay {
   position: fixed;
   left: 0;
@@ -18,63 +9,48 @@
   opacity: 1;
   pointer-events: none;
 }
+
 .resume-wrapper {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 960px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Typography */
-.resume-wrapper h1 {
-  font-size: 2rem;
-  font-weight: 700;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  font-family: var(--general-font-family);
   color: var(--header-text-color);
-  letter-spacing: 1px;
+  border: solid 1px white;
+  border-radius: 20px;
 }
 
-.resume-wrapper h2 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--header-text-color);
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
+.resume-section {
+  padding: 10px;
 }
 
-.resume-wrapper h2::before {
-  content: "💠";
-  margin-right: 0.5rem;
+.resume-section h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
 }
 
-.resume-wrapper h3 {
-  font-weight: 600;
+.resume-section h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
   color: var(--header-text-color);
 }
 
-.resume-wrapper p,
-.resume-wrapper li {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--header-text-color);
+.resume-section ul {
+  padding-left: 20px;
+  margin: 0;
 }
 
-.resume-wrapper a {
-  color: #70c0ff;
+.resume-section li {
+  margin-bottom: 6px;
+}
+
+.resume-link {
+  color: var(--header-text-color);
   text-decoration: underline;
+  font-family: var(--general-font-family);
 }
-
-.resume-wrapper ul {
-  padding-left: 1rem;
-  margin-top: 0.5rem;
-}
-
-.resume-wrapper strong {
-  color: var(--header-text-color);
+.resume-link:hover {
+  font-weight: bold;
+  color: bisque;
 }

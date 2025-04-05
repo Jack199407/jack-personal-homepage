@@ -1,139 +1,205 @@
 import React, { Component } from "react";
+import EmailSender from "../../../components/emailSender/EmailSender";
 import "./Resume.css";
 
 export default class Resume extends Component {
   render() {
     return (
-      <div className="resume-container">
+      <div>
         <div className="resume-overlay"></div>
         <div className="resume-wrapper">
-          <div>
-            <div>
-              <h1>Ke Zhao</h1>
-              <p className="text-sm">
-                📞 613-286-4043 | 📧 zhao0287@algonquinlive.com
-              </p>
-              <p className="text-sm mt-1">
+          <div className="resume-section profile-section">
+            <h1>Ke Zhao</h1>
+            <p className="text-sm">613-286-4043 | zhao0287@algonquinlive.com</p>
+            <p className="text-sm mt-1">
+              <a
+                href="https://www.linkedin.com/in/ke-zhao-657955321/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>{" "}
+              |{" "}
+              <a
+                href="https://github.com/Jack199407"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </p>
+          </div>
+
+          <div className="resume-section profile-summary-section">
+            <h2>Profile</h2>
+            <p>
+              Experienced Java developer with 4+ years of backend experience
+              participating in developing and maintaining financial system.
+              Adept at system design, database design, using various design
+              pattern.
+            </p>
+          </div>
+
+          <div className="resume-section skills-section">
+            <h2>Skills & Qualifications</h2>
+            <h3>Industry-Specific Skills</h3>
+            <ul>
+              <li>
+                Proficient in Java language, MySQL language, data structure,
+                computer principle, network protocol and other basic content.
+              </li>
+              <li>
+                Proficient in Spring Boot, Spring Cloud and other frameworks,
+                able to use Eureka to build microservice-based project
+                architecture.
+              </li>
+              <li>
+                Rich experience in high concurrency programming, good at using
+                multithreading to solve massive data scenarios and high
+                concurrency scenarios.
+              </li>
+              <li>
+                Proficient in HTML, CSS, JS and other front-end languages, can
+                use React and other popular frameworks to build projects,
+                familiar with front-end and back-end interaction specifications,
+                with C-side development experience.
+              </li>
+            </ul>
+            <h3>Additional Qualifications</h3>
+            <ul>
+              <li>Fast paced self-learning.</li>
+              <li>Careful thinking, good at data calculation business.</li>
+              <li>Good at communication and collaboration with colleagues.</li>
+              <li>
+                Quick thinking and problem solving in a difficult or stressful
+                situation, while maintaining a professional and calm demeanor.
+              </li>
+              <li>
+                Experience with Microsoft Office (Word, PowerPoint, Excel,
+                Outlook).
+              </li>
+              <li>
+                Strong active listening skills in both group and independent
+                settings, with the ability to follow through or follow up with
+                requests.
+              </li>
+              <li>
+                Manage time, prioritize tasks, and meet deadlines in an
+                efficient manner.
+              </li>
+              <li>
+                Maintain professional and polite relationships with both staff
+                and clients, approaching both with empathy and understanding.
+              </li>
+            </ul>
+          </div>
+
+          <div className="resume-section education-section">
+            <h2>Education</h2>
+            <ul>
+              <li>
+                <strong>2024-05 – Present </strong> – Computer Program/Diploma,
                 <a
-                  href="https://www.linkedin.com/in/ke-zhao-657955321/"
+                  href="https://www.algonquincollege.com/"
                   target="_blank"
                   rel="noreferrer"
+                  className="resume-link"
                 >
-                  LinkedIn
-                </a>{" "}
-                |{" "}
-                <a
-                  href="https://github.com/Jack199407"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
+                  Algonquin College
                 </a>
-              </p>
-            </div>
+                , Ottawa, Ontario
+              </li>
+              <li>
+                <strong>2017-09 – 2020-06 </strong> – Geological
+                Engineering/Master,{" "}
+                <a
+                  href="https://www.cup.edu.cn/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="resume-link"
+                >
+                  China University of Petroleum-Beijing
+                </a>
+                , Beijing, Beijing, China
+              </li>
+              <li>
+                <strong>2013-09 – 2017-06</strong> - Exploration Technology and
+                Engineering/Bachelor,{" "}
+                <a
+                  href="https://www.upc.edu.cn/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="resume-link"
+                >
+                  China University of Petroleum-East China
+                </a>
+                , Qingdao, Shandong, China
+              </li>
+            </ul>
+          </div>
 
-            <div>
-              <h2 className="text-xl font-bold mb-2">👤 Profile</h2>
-              <p>
-                Experienced Java developer with 4+ years of backend experience
-                in financial systems. Skilled in system design, database design,
-                and utilizing various design patterns.
-              </p>
-            </div>
+          <div className="resume-section experience-section">
+            <h2>Work Experience</h2>
+            <p>
+              <strong>Senior Java Engineer</strong> -{" "}
+              <a
+                href="https://en.wikipedia.org/wiki/Gaotu_Techedu"
+                target="_blank"
+                rel="noreferrer"
+                className="resume-link"
+              >
+                Gaotu Techedu
+              </a>
+              , Beijing,China, 2020-07 – 2024-04
+            </p>
+            <ul>
+              <li>
+                Optimized financial service codes with strategy, using design
+                patterns greatly improve the robustness and scalability of the
+                system.
+              </li>
+              <li>
+                Automated revenue settlement by using XJob framework, saving 75%
+                of labor costs.
+              </li>
+              <li>
+                Under China's double reduction policy, timely completion of the
+                development of banking supervision system to ensure the timely
+                return of company funds.
+              </li>
+              <li>
+                Led 2 new co-works to complete daily development tasks, never
+                had project delays or online accidents.
+              </li>
+              <li>
+                Responsible for the development of the teacher performance
+                calculation function, which automatically calculated the
+                teacher's salary every month.
+              </li>
+            </ul>
+          </div>
 
-            <div>
-              <h2 className="text-xl font-bold mb-2">
-                🛠️ Skills & Qualifications
-              </h2>
-              <ul className="list-disc list-inside space-y-1">
-                <li>
-                  Java, MySQL, data structures, computer principles, and network
-                  protocols
-                </li>
-                <li>Spring Boot, Spring Cloud, Eureka, microservices</li>
-                <li>High concurrency programming, multithreading</li>
-                <li>
-                  HTML, CSS, JavaScript, React, full-stack development
-                  experience
-                </li>
-                <li>Fast-paced self-learning and careful thinking</li>
-                <li>Strong communication and collaboration</li>
-                <li>Calm problem-solving under pressure</li>
-                <li>Proficient in Microsoft Office Suite</li>
-                <li>Strong time management and task prioritization</li>
-              </ul>
-            </div>
+          <div className="resume-section awards-section">
+            <h2>Awards</h2>
+            <ul>
+              <li>
+                Received a special salary increase due to outstanding work
+                achievements in 2021.
+              </li>
+              <li>Selected as excellent employee of R&D department in 2022.</li>
+            </ul>
+          </div>
 
-            <div>
-              <h2>🎓 Education</h2>
-              <ul>
-                <li>
-                  <strong>Computer Program/Diploma</strong>, Algonquin College,
-                  Ottawa, ON (2024-05 – Present)
-                </li>
-                <li>
-                  <strong>Geological Engineering/Master</strong>, China
-                  University of Petroleum-Beijing (2017-09 – 2020-06)
-                </li>
-                <li>
-                  <strong>
-                    Bachelor in Exploration Technology and Engineering
-                  </strong>
-                  , China University of Petroleum-East China (2013-09 – 2017-06)
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2>💼 Work Experience</h2>
-              <h3>
-                Senior Java Engineer – Gaotu Techedu, Beijing (2020-07 –
-                2024-04)
-              </h3>
-              <ul>
-                <li>
-                  Optimized financial service code with design patterns to
-                  improve system robustness and scalability
-                </li>
-                <li>
-                  Automated revenue settlement using XJob framework, saving 75%
-                  labor costs
-                </li>
-                <li>
-                  Developed banking supervision system under double reduction
-                  policy
-                </li>
-                <li>
-                  Led 2 junior developers, ensuring no project delays or
-                  production issues
-                </li>
-                <li>
-                  Built teacher performance calculation system to automate
-                  monthly salary computation
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h2>🏆 Awards</h2>
-              <ul>
-                <li>
-                  Special salary increase for outstanding performance (2021)
-                </li>
-                <li>Selected as excellent R&D employee (2022)</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2>🏀 Activities</h2>
-              <p>
-                Captain of the company basketball team. Organized training and
-                led the team to third place among 16 teams in a Software Park
-                tournament.
-              </p>
-            </div>
+          <div className="resume-section activities-section">
+            <h2>Activities</h2>
+            <p>
+              Participated in the basketball game held by the Software Park as
+              the captain, organized the training of the team members, and
+              finally won the third place among the 16 participating teams.
+            </p>
           </div>
         </div>
+        <EmailSender />
       </div>
     );
   }
