@@ -31,7 +31,7 @@ class EmailSender extends Component {
           email,
         }
       );
-      this.setState({ status: "" });
+      this.setState({ status: "", email: "" });
     } catch (error) {
       console.error(error);
       this.setState({ status: "Failed to send email." });
