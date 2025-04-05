@@ -1,0 +1,24 @@
+.photowall-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+  justify-items: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 80px;
+}
+
+.photowall-image {
+  width: 360px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 2px solid white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.photowall-image:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+}
