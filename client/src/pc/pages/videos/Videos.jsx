@@ -6,6 +6,7 @@ import Video from "../../components/video/Video";
 const API_KEY = "AIzaSyCBneVsoxm6-A4r-ROnf0oecO8TomRE_R0";
 const PLAYLISTS = {
   MUSIC: "PLmtWsmN_6KkQ_rLAFqt7kZm7j2FOJ5F6M",
+  VLOG: "PLmtWsmN_6KkSYc3Q7WpYGZXi57chzMRLI",
 };
 
 export default class Videos extends Component {
