@@ -27,7 +27,9 @@ export default class Home extends Component {
     return (
       <div className="home-page">
         <div className="home-overlay"></div>
-        <div className="take-room"></div>
+        <div className="take-room">
+          <p>Welcom to my website!</p>
+        </div>
         <AppleMusic />
         <PhotoWall />
       </div>

@@ -16,6 +16,7 @@ export default class Resume extends Component {
                 href="https://www.linkedin.com/in/ke-zhao-657955321/"
                 target="_blank"
                 rel="noreferrer"
+                className="web-refer"
               >
                 LinkedIn
               </a>{" "}
@@ -24,6 +25,7 @@ export default class Resume extends Component {
                 href="https://github.com/Jack199407"
                 target="_blank"
                 rel="noreferrer"
+                className="web-refer"
               >
                 GitHub
               </a>

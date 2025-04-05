@@ -5,8 +5,22 @@
   flex-direction: column;
 }
 .take-room {
+  display: flex;
   height: calc(100vh - 70px);
   width: 100%;
+  justify-content: center;
+  position: relative;
+}
+.take-room p {
+  color: var(--header-text-color);
+  font-family: var(--general-font-family);
+  font-size: var(--text-size);
+  font-weight: bold;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .home-overlay {
   position: fixed;

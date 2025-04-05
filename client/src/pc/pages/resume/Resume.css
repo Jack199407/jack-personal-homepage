@@ -54,3 +54,13 @@
   font-weight: bold;
   color: bisque;
 }
+.web-refer {
+  color: var(--header-text-color);
+  text-decoration: underline;
+  font-family: var(--general-font-family);
+}
+
+.web-refer:hover {
+  font-weight: bold;
+  color: bisque;
+}
