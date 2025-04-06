@@ -19,27 +19,29 @@ router.post("/request-signup", async (req, res) => {
   try {
     await sendMail({
       to: email,
-      subject: "Confirm your registration",
+      subject: "Welcome! Just one click away",
       html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <h2 style="color:#007BFF;">Welcome to Jack's World!</h2>
         <p>
-          非常感谢您注册成为我项目中的用户之一。实际上我还没有想到注册成为我的用户之后可以为您提供什么功能，
-          但是！既来之，我愿送上我最美好的祝福。或许你和我一样，正在找工作的道路上努力前行，或许生活还有其他不顺心的地方。
-          请不要放弃，坚持下去，愿笑容陪伴你每一天！
+          Thank you so much for signing up!<br />
+          We're excited to have you here. Before you get started, please confirm your email address.
         </p>
         <p>
-          Thank you so much for signing up to be a user of my project.
-          To be honest, I haven't figured out what exclusive features to offer you yet.
+          To be honest, I haven’t figured out what exclusive features to offer yet.<br />
           But since you're here, I sincerely wish you all the best.
-          Maybe you’re also job hunting like me, or going through something tough—
-          whatever it is, don’t give up. Keep going, and may your days be filled with smiles!
+          Whether you're job hunting like me, or going through something tough—don’t give up.
+          Keep going, and may your days be filled with smiles!
         </p>
         <div style="margin-top: 30px; text-align: center;">
           <a href="${link}" 
             style="display: inline-block; background-color: #007BFF; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">
-            Keep Going!
+            Confirm Email
           </a>
         </div>
+        <p style="font-size: 12px; color: #888; margin-top: 20px;">
+          If you didn't request this, feel free to ignore this email.
+        </p>
       </div>
     `,
     });
