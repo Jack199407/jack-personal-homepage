@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import formatTime from "../../../utils/formatTime";
 
 import {
   checkEmail,
@@ -23,7 +24,6 @@ export default class Message extends Component {
   fetchMessages = async () => {
     try {
       const res = await fetchMessages();
-      console.log("messages:", res);
       this.setState({ messages: res });
     } catch (error) {
       console.error("Failed to load messages", error);
@@ -106,17 +106,7 @@ export default class Message extends Component {
             <div key={m.id} className="message-item">
               <div className="msg-content">{m.content}</div>
               <div className="msg-meta">
-                {m.email} ·{" "}
-                {new Date(m.create_at).toLocaleString("en-CA", {
-                  timeZone: "America/Toronto",
-                  year: "numeric",
-                  month: "2-digit",
-                  day: "2-digit",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  second: "2-digit",
-                  hour12: true,
-                })}
+                {m.email} · {formatTime(m.create_at)}
               </div>
             </div>
           ))}

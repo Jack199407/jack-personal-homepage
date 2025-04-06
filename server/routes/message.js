@@ -11,13 +11,11 @@ router.post("/save", async (req, res) => {
   try {
     const moment = require("moment-timezone");
 
-    const torontoTime = moment()
-      .tz("America/Toronto")
-      .format("YYYY-MM-DD HH:mm:ss");
+    const utcTime = moment().utc().format("YYYY-MM-DD HH:mm:ss");
 
     await db.query(
       "INSERT INTO message (email, content, create_at) VALUES (?, ?, ?)",
-      [email, content, torontoTime]
+      [email, content, utcTime]
     );
     res.json({ message: "Message saved" });
   } catch (err) {
