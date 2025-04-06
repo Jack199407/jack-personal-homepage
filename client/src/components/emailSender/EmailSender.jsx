@@ -1,6 +1,6 @@
 // src/components/EmailSignup.jsx
 import React, { Component } from "react";
-import axios from "axios";
+import { sendEmail } from "../../services/api";
 import "./EmailSender.css";
 
 class EmailSender extends Component {
@@ -25,12 +25,7 @@ class EmailSender extends Component {
     }
 
     try {
-      await axios.post(
-        "https://jack-personal-homepage-backend.onrender.com/api/send-email",
-        {
-          email,
-        }
-      );
+      await sendEmail(email);
       this.setState({ status: "", email: "" });
     } catch (error) {
       console.error(error);

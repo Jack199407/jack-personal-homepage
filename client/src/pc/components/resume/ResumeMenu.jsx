@@ -33,7 +33,7 @@ export default class ResumeDropdown extends Component {
     return (
       <div className="resume-dropdown" ref={this.menuRef}>
         <div className={`resume-nav ${open ? "resume-nav--active" : ""}`}>
-          <Link to="/resume" className="resume-link">
+          <Link to="/resume" className="resume-button">
             Resume
           </Link>
           <button

@@ -3,7 +3,7 @@ import "./Video.css";
 
 import Grid from "../grid/Grid";
 
-import { fetchYoutubePlaylistItems } from "../../../services/youtube";
+import { fetchYoutubePlaylistItems } from "../../../services/api";
 
 export default class Video extends Component {
   state = {

@@ -21,3 +21,15 @@ export const fetchYoutubePlaylistItems = async (api, playlist) => {
 
   return res.data.items;
 };
+
+/**
+ * send email
+ */
+export const sendEmail = async (email) => {
+  await axios.post(
+    "https://jack-personal-homepage-backend.onrender.com/api/send-email",
+    {
+      email,
+    }
+  );
+};

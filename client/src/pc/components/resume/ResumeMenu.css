@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.resume-link {
+.resume-button {
   text-transform: uppercase;
   color: var(--header-text-color);
   font-weight: 600;
