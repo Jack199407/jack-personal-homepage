@@ -1,11 +1,7 @@
 import axios from "axios";
 
-/**
- * Get YouTube videos in playlist
- * @param {string} api - API Key
- * @param {string} playlist - playlist ID
- * @returns {Promise<Array>} - videos array
- */
+const baseURL = process.env.REACT_APP_API_BASE || "http://localhost:5050";
+
 export const fetchYoutubePlaylistItems = async (api, playlist) => {
   const res = await axios.get(
     "https://www.googleapis.com/youtube/v3/playlistItems",
@@ -22,29 +18,20 @@ export const fetchYoutubePlaylistItems = async (api, playlist) => {
   return res.data.items;
 };
 
-/**
- * send email
- */
 export const sendEmail = async (email) => {
-  await axios.post(
-    "https://jack-personal-homepage-backend.onrender.com/api/send-email",
-    {
-      email,
-    }
-  );
+  await axios.post(`${baseURL}/api/email/send-email`, {
+    email,
+  });
 };
 
 export const requestSignup = async (email) => {
-  await axios.post(
-    "https://jack-personal-homepage-backend.onrender.com/api/request-signup",
-    {
-      email,
-    }
-  );
+  await axios.post(`${baseURL}/api/auth/request-signup`, {
+    email,
+  });
 };
 
-export const authConfirm = (token) => {
-  axios.post("jack-personal-homepage-backend.onrender.com/api/auth/confirm", {
+export const authConfirm = async (token) => {
+  await axios.post(`${baseURL}/api/auth/confirm`, {
     token,
   });
 };

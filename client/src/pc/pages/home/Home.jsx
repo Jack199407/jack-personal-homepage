@@ -1,16 +1,41 @@
 import React, { Component } from "react";
-
+import { toast } from "react-toastify";
 import PhotoWall from "../../../components/photoWall/PhotoWall";
 import AppleMusic from "../../../components/appleMusic/AppleMusic";
 import { requestSignup, authConfirm } from "../../../services/api";
 import "./Home.css";
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
+      tokenChecked: false,
     };
   }
+
+  checkTokenFromURL = async () => {
+    if (this.state.tokenChecked) return;
+
+    const params = new URLSearchParams(
+      this.props.location?.search || window.location.search
+    );
+    const token = params.get("token");
+
+    if (token) {
+      try {
+        await authConfirm(token);
+        toast.success("Success sign up!");
+        const newUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, newUrl);
+      } catch (error) {
+        console.error(error);
+        toast.error("The link is invalid or has expired.");
+      }
+    }
+
+    this.setState({ tokenChecked: true });
+  };
 
   handleScroll = () => {
     const overlay = document.getElementsByClassName("home-overlay")[0];
@@ -24,33 +49,25 @@ export default class Home extends Component {
     }
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get("token");
-
-    if (token) {
-      try {
-        authConfirm(token);
-        alert("Success sign up!");
-      } catch (error) {
-        console.error(error);
-        alert("The link is invalid or has expired.");
-      }
-    }
+    await this.checkTokenFromURL();
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
+
   handleChange = (e) => {
     this.setState({ email: e.target.value });
   };
+
   handleSubmit = async () => {
     const { email } = this.state;
     await requestSignup(email);
-    alert("A confirmation email has been sent.");
+    toast.info("A confirmation email has been sent.");
   };
+
   render() {
     const { email } = this.state;
     return (

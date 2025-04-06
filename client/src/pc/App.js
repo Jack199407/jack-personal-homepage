@@ -1,4 +1,6 @@
 import { Route, Routes, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Figure from "../assets/figure.png";
 import Header from "./components/header/Header";
@@ -19,13 +21,17 @@ function App() {
       </div>
       <Header />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route
+          path="/"
+          element={<Navigate to={`/home${window.location.search}`} replace />}
+        />
         <Route path="/home" element={<Home />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 }
