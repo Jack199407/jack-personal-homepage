@@ -57,7 +57,7 @@ export default class Message extends Component {
 
     try {
       const res = await checkEmail(email);
-      if (!res.data.exists) {
+      if (!res) {
         return this.setState({
           error: "Please register before leaving a message.",
         });
