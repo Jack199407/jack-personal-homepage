@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Videos from "./pages/videos/Videos";
 import About from "./pages/about/About";
+import Message from "./pages/message/Message";
 import Resume from "./pages/resume/Resume";
 import usePageTitle from "../hooks/usePageTitle";
 import "./App.css";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/videos" element={<Videos />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/about" element={<About />} />
+        <Route path="/message" element={<Message />} />
       </Routes>
       <Footer />
       <ToastContainer position="top-center" autoClose={3000} />

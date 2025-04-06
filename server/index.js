@@ -1,8 +1,8 @@
-// server/index.js
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
+const userRoutes = require("./routes/user");
+const messageRoutes = require("./routes/message");
 
 const app = express();
 const PORT = process.env.PORT || 5050;
@@ -18,6 +18,8 @@ const emailRoutes = require("./routes/email");
 
 app.use("/api/auth", authRoutes);
 app.use("/api/email", emailRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/message", messageRoutes);
 
 // Health check
 app.get("/", (req, res) => {

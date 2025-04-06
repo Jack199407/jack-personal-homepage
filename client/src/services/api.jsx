@@ -35,3 +35,21 @@ export const authConfirm = async (token) => {
     token,
   });
 };
+
+export const checkEmail = async (email) => {
+  const res = await axios.post(`${baseURL}/api/user/check-email`, { email });
+  return res.data.exists;
+};
+
+export const submitMessage = async ({ email, content }) => {
+  const res = await axios.post(`${baseURL}/api/message/save`, {
+    email,
+    content,
+  });
+  return res.data;
+};
+
+export const fetchMessages = async () => {
+  const res = await axios.get(`${baseURL}/api/message/latest`);
+  return res.data;
+};

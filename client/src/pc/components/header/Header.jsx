@@ -21,7 +21,7 @@ export default class Header extends Component {
             </li>
             <ResumeMenu />
             <li>
-              <a href="/contact">Contact</a>
+              <NavLink to="/Message">Message</NavLink>
             </li>
           </ul>
         </nav>
