@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
+const { sendMail } = require("../utils/mailer");
 const db = require("../db");
 require("dotenv").config();
 
@@ -15,17 +16,8 @@ router.post("/request-signup", async (req, res) => {
   const token = jwt.sign({ email }, SECRET, { expiresIn: "15m" });
   const link = `${CLIENT_URL}?token=${token}`;
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
   try {
-    await transporter.sendMail({
-      from: `"No Reply" <${process.env.EMAIL_USER}>`,
+    await sendMail({
       to: email,
       subject: "Confirm your registration",
       html: `
