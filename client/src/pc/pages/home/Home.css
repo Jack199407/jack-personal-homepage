@@ -1,11 +1,12 @@
 .home-page {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
 }
 .take-room {
+  position: relative;
   display: flex;
+  flex-direction: column;
   height: calc(100vh - 70px);
   width: 100%;
   justify-content: center;
@@ -16,10 +17,6 @@
   font-family: var(--general-font-family);
   font-size: var(--text-size);
   font-weight: bold;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .home-overlay {
@@ -37,4 +34,50 @@
 
 .home-overlay.active {
   opacity: 1;
+}
+.sign-up-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sign-up-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-wrapper input {
+  padding: 12px 16px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  width: 300px;
+  background-color: white;
+  color: #333;
+}
+
+.sign-up-wrapper input::placeholder {
+  color: #777;
+  font-weight: 600;
+  font-family: var(--general-font-family);
+}
+.sign-up-wrapper button {
+  padding: 12px 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: var(--general-font-family);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sign-up-wrapper button:hover {
+  background-color: white;
+  color: #2c1209;
 }

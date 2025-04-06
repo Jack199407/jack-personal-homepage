@@ -33,3 +33,18 @@ export const sendEmail = async (email) => {
     }
   );
 };
+
+export const requestSignup = async (email) => {
+  await axios.post(
+    "https://jack-personal-homepage-backend.onrender.com/api/request-signup",
+    {
+      email,
+    }
+  );
+};
+
+export const authConfirm = (token) => {
+  axios.post("jack-personal-homepage-backend.onrender.com/api/auth/confirm", {
+    token,
+  });
+};
