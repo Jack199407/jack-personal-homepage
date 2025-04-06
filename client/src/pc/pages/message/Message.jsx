@@ -23,7 +23,6 @@ export default class Message extends Component {
   fetchMessages = async () => {
     try {
       const res = await fetchMessages();
-      console.log("messages:", res);
       this.setState({ messages: res });
     } catch (error) {
       console.error("Failed to load messages", error);
