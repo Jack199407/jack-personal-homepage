@@ -6,10 +6,10 @@ import Figure from "../assets/figure.png";
 import Header from "./components/header/Header";
 import Footer from "../shared/components/footer/Footer";
 import Home from "./pages/home/Home";
-import Videos from "./pages/videos/Videos";
-import About from "./pages/about/About";
+import Videos from "../shared/pages/videos/Videos";
+import About from "../shared/pages/about/About";
 import Message from "./pages/message/Message";
-import Resume from "./pages/resume/Resume";
+import Resume from "../shared/pages/resume/Resume";
 import usePageTitle from "../hooks/usePageTitle";
 import "./App.css";
 

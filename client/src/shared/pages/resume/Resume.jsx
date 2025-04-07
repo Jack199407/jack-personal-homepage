@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import EmailSender from "../../../shared/components/emailSender/EmailSender";
+import EmailSender from "../../components/emailSender/EmailSender";
 import "./Resume.css";
 
 export default class Resume extends Component {

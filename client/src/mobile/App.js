@@ -4,6 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Figure from "../assets/figure.png";
 import Header from "../mobile/components/header/Header";
+import Videos from "../shared/pages/videos/Videos";
+import About from "../shared/pages/about/About";
+import Resume from "../shared/pages/resume/Resume";
 import Footer from "../shared/components/footer/Footer";
 import usePageTitle from "../hooks/usePageTitle";
 import Home from "./pages/home/Home";
@@ -22,6 +25,9 @@ function App() {
           element={<Navigate to={`/home${window.location.search}`} replace />}
         />
         <Route path="/home" element={<Home />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
       <Footer />
       <ToastContainer position="top-center" autoClose={3000} />

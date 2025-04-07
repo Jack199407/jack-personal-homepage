@@ -9,15 +9,21 @@
   opacity: 1;
   pointer-events: none;
 }
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .about-container {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .about-wrapper img {
-  margin-top: 15%;
-  width: 1000px;
+  margin-top: 5%;
+  width: 50%;
   height: auto;
 }
 .about-header {
@@ -27,7 +33,7 @@
 }
 
 .about-content {
-  margin: 20px 80px;
+  margin: 5% 10%;
   color: var(--header-text-color);
   font-family: var(--general-font-family);
   font-size: var(--text-size);
