@@ -7,6 +7,7 @@ import Header from "../mobile/components/header/Header";
 import Videos from "../shared/pages/videos/Videos";
 import About from "../shared/pages/about/About";
 import Resume from "../shared/pages/resume/Resume";
+import Message from "../shared/pages/message/Message";
 import Footer from "../shared/components/footer/Footer";
 import usePageTitle from "../hooks/usePageTitle";
 import Home from "./pages/home/Home";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/videos" element={<Videos />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/message" element={<Message />} />
       </Routes>
       <Footer />
       <ToastContainer position="top-center" autoClose={3000} />

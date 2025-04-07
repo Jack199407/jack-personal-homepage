@@ -8,7 +8,7 @@ import Footer from "../shared/components/footer/Footer";
 import Home from "./pages/home/Home";
 import Videos from "../shared/pages/videos/Videos";
 import About from "../shared/pages/about/About";
-import Message from "./pages/message/Message";
+import Message from "../shared/pages/message/Message";
 import Resume from "../shared/pages/resume/Resume";
 import usePageTitle from "../hooks/usePageTitle";
 import "./App.css";
