@@ -21,20 +21,28 @@ body {
 }
 
 .figure {
-  width: 350px;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   :root {
     --first-header-size: 24px;
     --text-size: 18px;
   }
+  .figure-wrapper {
+    width: 60%;
+    height: auto;
+  }
 }
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   :root {
     --first-header-size: 32px;
     --text-size: 20px;
+  }
+  .figure-wrapper {
+    width: 20%;
+    height: auto;
   }
 }
