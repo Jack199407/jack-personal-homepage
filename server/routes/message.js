@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db");
 
+const { maskEmail } = require("../utils/mask");
+
 router.post("/save", async (req, res) => {
   const { email, content } = req.body;
   if (!email || !content) {
@@ -29,7 +31,11 @@ router.get("/latest", async (req, res) => {
     const [rows] = await db.query(
       "SELECT * FROM message ORDER BY create_at DESC LIMIT 10"
     );
-    res.json(rows);
+    const maskedRows = rows.map((row) => ({
+      ...row,
+      email: maskEmail(row.email),
+    }));
+    res.json(maskedRows);
   } catch (err) {
     console.error("Failed to load messages:", err);
     res.status(500).json({ message: "Server error" });

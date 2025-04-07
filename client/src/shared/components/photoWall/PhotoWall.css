@@ -36,12 +36,12 @@
   z-index: 10;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
   .photowall-container {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 1024px) and (orientation: landscape) {
   .photowall-container {
     grid-template-columns: repeat(3, 1fr);
   }
