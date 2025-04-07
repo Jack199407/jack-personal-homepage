@@ -1,4 +1,4 @@
-header {
+.pc-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,21 +6,21 @@ header {
   height: 70px;
   box-sizing: border-box; /*it includes the padding and border inside the specified width and height*/
 }
-header p {
+.pc-header p {
   font-size: 50px;
   font-family: var(--general-font-family);
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   color: var(--header-text-color);
   font-weight: bold;
 }
-nav ul {
+.pc-header nav ul {
   display: flex;
   gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-nav a {
+.pc-header nav a {
   text-decoration: none;
   color: var(--header-text-color);
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -29,8 +29,8 @@ nav a {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-nav a.active,
-nav a:hover {
+.pc-header nav a.active,
+.pc-header nav a:hover {
   color: rgb(242, 239, 239);
   text-decoration: underline;
 }

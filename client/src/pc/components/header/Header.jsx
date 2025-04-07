@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import ResumeMenu from "../resume/ResumeMenu";
+import ResumeMenu from "../../../shared/components/resumeMenu/ResumeMenu";
 import "./Header.css";
 
 export default class Header extends Component {
   render() {
     return (
-      <header>
+      <header className="pc-header">
         <p>JACK(KE) ZHAO</p>
         <nav>
           <ul>

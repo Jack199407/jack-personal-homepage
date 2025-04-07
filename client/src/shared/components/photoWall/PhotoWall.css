@@ -18,11 +18,12 @@
   justify-items: center;
   align-items: center;
   padding: 2rem;
+  width: 80%;
 }
 
 .photowall-image {
-  width: 240px;
-  height: 320px;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 0.75rem;
   border: 2px solid white;
@@ -33,4 +34,15 @@
 .photowall-image:hover {
   transform: scale(1.05) rotate(0deg);
   z-index: 10;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .photowall-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .photowall-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -1,0 +1,65 @@
+.mobile-header {
+  color: var(--header-text-color);
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  /* z-index: 999; */
+}
+
+.mobile-header .mobile-header-top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-header .logo {
+  font-size: 30px;
+  font-family: var(--general-font-family);
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: var(--header-text-color);
+}
+
+.mobile-header .menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--header-text-color);
+}
+
+.mobile-header .mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 15px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-header .mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-header .mobile-nav li {
+  margin: 15px 0;
+}
+
+.mobile-header .mobile-nav a {
+  text-decoration: none;
+  color: var(--header-text-color);
+  font-family: var(--general-font-family);
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+
+.mobile-header .mobile-nav a.active {
+  color: var(--header-text-color);
+  text-decoration: underline;
+}

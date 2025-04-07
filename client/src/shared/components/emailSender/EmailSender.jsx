@@ -1,6 +1,6 @@
 // src/components/EmailSignup.jsx
 import React, { Component } from "react";
-import { sendEmail } from "../../services/api";
+import { sendEmail } from "../../../services/api";
 import "./EmailSender.css";
 
 class EmailSender extends Component {
