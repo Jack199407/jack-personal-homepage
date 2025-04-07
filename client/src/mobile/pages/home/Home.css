@@ -37,6 +37,7 @@
 
 .mobile-home .sign-up-area {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -46,7 +47,7 @@
 }
 
 .mobile-home .sign-up-area p {
-  font-size: 18px;
+  font-size: var(--text-size);
   margin-bottom: 12px;
 }
 
@@ -55,6 +56,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  width: 80%;
 }
 
 .mobile-home .sign-up-wrapper input {
@@ -62,7 +64,7 @@
   font-size: 18px;
   border: none;
   outline: none;
-  width: 300px;
+  width: 100%;
   background-color: white;
   color: #333;
 }
@@ -97,13 +99,10 @@
     justify-content: center;
   }
 
-  .mobile-home .sign-up-wrapper input,
-  .mobile-home .sign-up-wrapper button {
-    max-width: none;
-    width: auto;
-  }
-
   .mobile-home .sign-up-wrapper input {
-    margin-right: 12px;
+    width: 40%;
+  }
+  .mobile-home .sign-up-wrapper button {
+    width: auto;
   }
 }

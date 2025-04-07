@@ -29,11 +29,12 @@ export default class ResumeDropdown extends Component {
 
   render() {
     const { open } = this.state;
+    const { onClick } = this.props;
 
     return (
       <div className="resume-dropdown" ref={this.menuRef}>
         <div className={`resume-nav ${open ? "resume-nav--active" : ""}`}>
-          <Link to="/resume" className="resume-button">
+          <Link to="/resume" className="resume-button" onClick={onClick}>
             Resume
           </Link>
           <button
@@ -48,7 +49,12 @@ export default class ResumeDropdown extends Component {
         {open && (
           <div className="resume-menu-wrapper">
             <div className="resume-menu">
-              <a href="/Resume-Ke.pdf" download className="resume-menu-item">
+              <a
+                href="/Resume-Ke.pdf"
+                download
+                className="resume-menu-item"
+                onClick={onClick}
+              >
                 Download
               </a>
             </div>
