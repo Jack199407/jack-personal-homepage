@@ -33,69 +33,147 @@ export default class Resume extends Component {
           </div>
 
           <div className="resume-section profile-summary-section">
-            <h2>Profile</h2>
+            <h2>Summary</h2>
             <p>
-              Experienced Java developer with 4+ years of backend experience
-              participating in developing and maintaining financial system.
-              Adept at system design, database design, using various design
-              pattern.
+              Detail-oriented Java developer with 5+ years of experience
+              building scalable, secure, and high-availability backend systems
+              in the e-commerce domain. Proficient in Java 8+, Spring Boot,
+              RESTful APIs, SQL. Hands-on experience in containerization
+              (Docker), and Agile SDLC. Strong advocate for automated testing,
+              structured documentation, and continuous delivery.
             </p>
           </div>
 
           <div className="resume-section skills-section">
-            <h2>Skills & Qualifications</h2>
-            <h3>Industry-Specific Skills</h3>
+            <h2>Technical Skills</h2>
             <ul>
+              <li>Languages: Java (8+), SQL, JavaScript</li>
               <li>
-                Proficient in Java language, MySQL language, data structure,
-                computer principle, network protocol and other basic content.
+                Frameworks & Libraries: Spring Boot, Spring Cloud, Spring
+                Security, Spring Data JPA, Node.js, Express
+              </li>
+              <li>Build & CI/CD Tools: Gradle, Maven, Jenkins</li>
+              <li>API & Integration: RESTful APIs, OpenFeign, JSON</li>
+              <li>Databases: MySQL, basic experience with Oracle</li>
+              <li>
+                Task Scheduling & Messaging: Xxl-Job (scheduled batch jobs),
+                RocketMQ (message queue), basic knowledge of event-driven design
+              </li>
+              <li>Tools & Platforms: Git, Docker, Postman</li>
+              <li>Testing & Debugging: JUnit, Postman for API testing</li>
+              <li>
+                Development Concepts: Microservices architecture, Service
+                discovery(Eureka)
               </li>
               <li>
-                Proficient in Spring Boot, Spring Cloud and other frameworks,
-                able to use Eureka to build microservice-based project
-                architecture.
-              </li>
-              <li>
-                Rich experience in high concurrency programming, good at using
-                multithreading to solve massive data scenarios and high
-                concurrency scenarios.
-              </li>
-              <li>
-                Proficient in HTML, CSS, JS and other front-end languages, can
-                use React and other popular frameworks to build projects,
-                familiar with front-end and back-end interaction specifications,
-                with C-side development experience.
-              </li>
-            </ul>
-            <h3>Additional Qualifications</h3>
-            <ul>
-              <li>Fast paced self-learning.</li>
-              <li>Careful thinking, good at data calculation business.</li>
-              <li>Good at communication and collaboration with colleagues.</li>
-              <li>
-                Quick thinking and problem solving in a difficult or stressful
-                situation, while maintaining a professional and calm demeanor.
-              </li>
-              <li>
-                Experience with Microsoft Office (Word, PowerPoint, Excel,
-                Outlook).
-              </li>
-              <li>
-                Strong active listening skills in both group and independent
-                settings, with the ability to follow through or follow up with
-                requests.
-              </li>
-              <li>
-                Manage time, prioritize tasks, and meet deadlines in an
-                efficient manner.
-              </li>
-              <li>
-                Maintain professional and polite relationships with both staff
-                and clients, approaching both with empathy and understanding.
+                Other: Agile development process, CI concepts, System
+                traceability and logging
               </li>
             </ul>
           </div>
-
+          <div className="resume-section experience-section">
+            <h2>Work Experience</h2>
+            <p>
+              <strong>Senior Java Engineer</strong> -{" "}
+              <a
+                href="https://en.wikipedia.org/wiki/Gaotu_Techedu"
+                target="_blank"
+                rel="noreferrer"
+                className="resume-link"
+              >
+                Gaotu(NASDAQ: GOTU)
+              </a>
+              , Beijing,China, 2020-07 – 2024-04
+            </p>
+            <ul>
+              <li>
+                Optimized financial service codes with strategy, using design
+                patterns greatly improve the robustness and scalability of the
+                system.
+              </li>
+              <li>
+                Automated revenue settlement by using Xxl-Job framework, saving
+                75% of labor costs.
+              </li>
+              <li>
+                Under China's double reduction policy, timely completion of the
+                development of banking supervision system to ensure the timely
+                return of company funds.
+              </li>
+              <li>
+                Led 2 new co-works to complete daily development tasks, never
+                had project delays or online accidents.
+              </li>
+              <li>
+                Responsible for the development of the teacher performance
+                calculation function, which automatically calculated the
+                teacher's salary every month.
+              </li>
+              <li>
+                Collaborated cross-functionally with product managers, QA, and
+                analysts in bi-weekly sprints, participated in code reviews and
+                defect triage.
+              </li>
+              <li>
+                Participated in code reviews, maintained technical
+                documentation, and led release activities across test and
+                production environments.
+              </li>
+              <li>
+                Assisted with production issue analysis and root cause
+                diagnosis, contributing to continuous improvement of system
+                resilience.
+              </li>
+            </ul>
+          </div>
+          <div className="resume-section project-section">
+            <h2>Projects</h2>
+            <p>
+              <strong>CMB Capital Supervision System</strong>
+            </p>
+            <p>
+              Spring Boot, MySQL, OpenFeign, Xxl-Job, RESTful APIs —{" "}
+              <strong>Sep 2022</strong>
+            </p>
+            <ul>
+              <li>
+                Developed financial reporting microservice in response to
+                China’s “Double Reduction” regulation, enabling daily automated
+                reporting of course-related payment and refund data to China
+                Merchants Bank.
+              </li>
+              <li>
+                Integrated data across microservices and implemented nightly
+                batch jobs to calculate refundable amounts based on course
+                progress.
+              </li>
+              <li>
+                Implemented secure communication and asynchronous callback
+                listener to handle API response from the bank in real time.
+              </li>
+              <li>
+                Key Technologies: Spring Boot, RESTful APIs, OpenFeign,
+                Scheduled Tasks (Xxl-Job), MySQL, Secure API integration.
+              </li>
+            </ul>
+            <p>
+              <strong>Personal Portfolio Website</strong>
+            </p>
+            <p>
+              React, Node.js, Express, HTML, CSS — <strong>March 2025</strong>
+            </p>
+            <ul>
+              <li>
+                Independently developed a responsive personal website to
+                showcase resume and technical skills, with front-end in React
+                and backend in Express.
+              </li>
+              <li>
+                Deployed using modern HTML/CSS layout and GitHub-based CI/CD to
+                ensure responsiveness and maintainability.
+              </li>
+            </ul>
+          </div>
           <div className="resume-section education-section">
             <h2>Education</h2>
             <ul>
@@ -136,47 +214,6 @@ export default class Resume extends Component {
                   China University of Petroleum-East China
                 </a>
                 , Qingdao, Shandong, China
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume-section experience-section">
-            <h2>Work Experience</h2>
-            <p>
-              <strong>Senior Java Engineer</strong> -{" "}
-              <a
-                href="https://en.wikipedia.org/wiki/Gaotu_Techedu"
-                target="_blank"
-                rel="noreferrer"
-                className="resume-link"
-              >
-                Gaotu Techedu
-              </a>
-              , Beijing,China, 2020-07 – 2024-04
-            </p>
-            <ul>
-              <li>
-                Optimized financial service codes with strategy, using design
-                patterns greatly improve the robustness and scalability of the
-                system.
-              </li>
-              <li>
-                Automated revenue settlement by using XJob framework, saving 75%
-                of labor costs.
-              </li>
-              <li>
-                Under China's double reduction policy, timely completion of the
-                development of banking supervision system to ensure the timely
-                return of company funds.
-              </li>
-              <li>
-                Led 2 new co-works to complete daily development tasks, never
-                had project delays or online accidents.
-              </li>
-              <li>
-                Responsible for the development of the teacher performance
-                calculation function, which automatically calculated the
-                teacher's salary every month.
               </li>
             </ul>
           </div>
