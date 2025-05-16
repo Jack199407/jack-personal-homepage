@@ -10,7 +10,7 @@ export default class Resume extends Component {
         <div className="resume-wrapper">
           <div className="resume-section profile-section">
             <h1>Ke Zhao</h1>
-            <p className="text-sm">613-286-4043 | zhao0287@algonquinlive.com</p>
+            <p className="text-sm">613-286-4043 | kezhao1555@gmail.com</p>
             <p className="text-sm mt-1">
               <a
                 href="https://www.linkedin.com/in/ke-zhao-657955321/"
